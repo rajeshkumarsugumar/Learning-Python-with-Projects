@@ -1,0 +1,21 @@
+import tweepy
+from textblob import TextBlob
+
+consumer_key = '63ysFRJXlTy7cerSrSelBWnKQ'
+consumer_secret = 'd8ay0wkMVmfi5drBpvO6ovRxiFD9z0qbW6rpZtTKGiZOWCaB6r'
+
+access_token = '265445391-i4Txtov44XntXnTX5wW23XArUTrLwahstdejewlZ'
+access_secret = 'Axd8QT0kAsL0iUQkf48EoDkbKBGhp3eTThexqI1RD1lS2'
+
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+
+auth.set_access_token(access_token,access_secret)
+
+api = tweepy.API(auth)
+
+public_tweets = api.search('OpenAI')
+for tweet in public_tweets:
+    print(tweet.text)
+    analysis = TextBlob(tweet.text)
+    print(analysis.sentiment)
