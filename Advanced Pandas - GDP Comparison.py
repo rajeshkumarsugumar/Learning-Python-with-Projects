@@ -55,7 +55,7 @@
 #        'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008',
 #        '2009', '2010', '2011', '2012', '2013', '2014', '2015'].
 # 
-# *This function should return a DataFrame with 20 columns and 15 entries.*
+# *This function should return a DataFrame with 20 columns and 15 entries.*)
 
 # In[1]:
 
